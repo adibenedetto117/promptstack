@@ -10,5 +10,5 @@ services:
       - ./data:/app/data
     environment:
       - MODEL_PATH=/app/models/deepseek-llm-7b-chat.Q6_K.gguf
-      - THREADS=4  # Adjust based on your CPU
+      - THREADS=6  # Adjust based on your CPU
     restart: unless-stopped

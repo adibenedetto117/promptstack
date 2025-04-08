@@ -295,6 +295,8 @@ async def chat_completions(request: ChatRequest):
             "total_tokens": response["usage"]["total_tokens"],
             "time_taken": round(end_time - start_time, 2)
         }
+
+        print(response)
         
         return ChatResponse(text=generated_text, usage=tokens)
     except Exception as e:

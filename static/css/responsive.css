@@ -1,0 +1,161 @@
+/* 
+ * responsive.css - Mobile responsiveness
+ */
+
+/* Tablets and smaller desktop screens */
+@media (max-width: 1200px) {
+    :root {
+        --sidebar-width: 280px;
+    }
+    
+    .system-message-display {
+        max-width: 300px;
+    }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 992px) {
+    :root {
+        --sidebar-width: 260px;
+    }
+    
+    .message {
+        max-width: 90%;
+    }
+    
+    .system-message-display {
+        max-width: 240px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        width: 85%;
+        max-width: 320px;
+        box-shadow: var(--shadow-lg);
+        z-index: var(--z-modal);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .message {
+        max-width: 92%;
+    }
+
+    .system-message-display {
+        max-width: 150px;
+    }
+
+    .chat-header {
+        padding: 0.875rem 1rem;
+    }
+
+    .chat-input-container {
+        padding: 0.875rem 1rem;
+    }
+
+    .modal {
+        width: 95%;
+    }
+    
+    .btn-full {
+        width: calc(100% - 2rem);
+        margin: 1rem;
+    }
+    
+    .settings-group {
+        margin: 0 0.75rem 1.25rem;
+    }
+    
+    .sidebar-section-title {
+        padding: 0.75rem 1rem;
+    }
+    
+    .empty-state-text {
+        max-width: 250px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .chat-header-title {
+        max-width: 200px;
+    }
+    
+    .system-message-display {
+        max-width: 120px;
+    }
+    
+    .chat-title {
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .modal-title {
+        font-size: 1.1rem;
+    }
+    
+    .sidebar-tab {
+        font-size: 0.85rem;
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .empty-state-icon {
+        font-size: 2.5rem;
+    }
+    
+    .empty-state-title {
+        font-size: 1.1rem;
+    }
+    
+    .empty-state-text {
+        font-size: 0.9rem;
+        max-width: 220px;
+    }
+    
+    .toast {
+        min-width: 200px;
+        max-width: 300px;
+    }
+}
+
+/* Height-based media queries */
+@media (max-height: 600px) {
+    .chat-input-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .chat-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .sidebar-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .empty-state {
+        padding: 1.5rem;
+    }
+    
+    .empty-state-icon {
+        margin-bottom: 0.75rem;
+    }
+}
